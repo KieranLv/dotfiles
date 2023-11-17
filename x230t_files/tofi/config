@@ -1,0 +1,25 @@
+#font config
+font-size = 10
+font = "NotoSansMono"
+
+# text color
+text-color = #ffffff
+selection-color = #757575
+
+# background color
+background-color = #000000ff
+
+# border configuration
+outline-width = 0
+border-width = 1
+border-color = #ffffff
+
+# size and margin
+width = 400
+height = 300
+
+# special settings
+history = true
+matching-algorithm = normal
+require-match = true
+terminal = havoc
