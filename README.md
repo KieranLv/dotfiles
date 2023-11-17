@@ -1,14 +1,12 @@
 ## kieran dotfiles
-documentation:
+### documentation:
 
-window manager: sway
-run program: tofi
-compositor: wayland
-operating system:
-    librebooted x230t - artix linux
-    main pc - arch linux
-    server - truenas
-
-these files include pre-compiled roms of libreboot for the lenovo x230t
-
-this will be updated further on
+window manager: sway<br>
+run program: tofi<br>
+compositor: wayland<br>
+operating system:<br>
+	librebooted x230t - artix linux<br>
+	main pc - arch linux<br>
+	server - truenas<br>
+<br><br>these files include pre-compiled roms of libreboot for the lenovo x230t
+<br>this will be updated further on
