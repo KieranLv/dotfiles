@@ -10,6 +10,7 @@ what are these files?
 * vim (vimrc with addons)
 * dwmblocks (blocks)
 * libreboot (bios images for x230t_12mb)
+* xinitrc (the start script for my computer)
 * other fun scripts that i use
 
 what do i do with these?
