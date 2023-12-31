@@ -1,12 +1,19 @@
-## kieran dotfiles
-### documentation:
+kieran dotfiles
+===============
+welcome to my dotfiles.<br/>
+i have a lot of things on here that go to my computers.<br/>
 
-window manager: sway<br>
-run program: tofi<br>
-compositor: wayland<br>
-operating system:<br>
-	librebooted x230t - artix linux<br>
-	main pc - arch linux<br>
-	server - truenas<br>
-<br><br>these files include pre-compiled roms of libreboot for the lenovo x230t
-<br>this will be updated further on
+what are these files?
+---------------------
+* dwm (with patches)
+* dmenu (with patches)
+* vim (vimrc with addons)
+* dwmblocks (blocks)
+* libreboot (bios images for x230t_12mb)
+* other fun scripts that i use
+
+what do i do with these?
+------------------------
+steal them<br/>
+do whatever you want with these<br/>
+these are mine and are fun to mess with.
