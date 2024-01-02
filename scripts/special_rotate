@@ -1,0 +1,44 @@
+#!/bin/sh
+
+fingerID=$(xinput | grep -oP "Finger.*id=\K\d+")
+penID=$(xinput | grep -m 1 -oP "Pen.*id=\K\d+")
+screenID=$(xrandr | grep "connected primary" | awk '{print $1}')
+
+# current position
+cpos=$(xinput --list-props "$fingerID" | awk '/Coordinate Transformation Matrix/{print $5$6$7$8$9$10$11$12$NF}')
+
+# 0
+normal='1 0 0 0 1 0 0 0 1'
+normal_float='1.000000,0.000000,0.000000,0.000000,1.000000,0.000000,0.000000,0.000000,1.000000'
+
+# 90
+right='0 1 0 -1 0 1 0 0 1'
+right_float='0.000000,1.000000,0.000000,-1.000000,0.000000,1.000000,0.000000,0.000000,1.000000'
+
+# 180 
+inverted='-1 0 1 0 -1 1 0 0 1'
+inverted_float='-1.000000,0.000000,1.000000,0.000000,-1.000000,1.000000,0.000000,0.000000,1.000000'
+
+# 270
+left='0 -1 1 1 0 0 0 0 1'
+left_float='0.000000,-1.000000,1.000000,1.000000,0.000000,0.000000,0.000000,0.000000,1.000000'
+
+if [[ $cpos == $normal_float ]]
+then
+	xinput set-prop $fingerID 'Coordinate Transformation Matrix' $right
+	xinput set-prop $penID 'Coordinate Transformation Matrix' $right
+	xrandr --output $screenID --rotate right
+elif [[ $cpos == $right_float ]]; then
+	xinput set-prop $fingerID 'Coordinate Transformation Matrix' $inverted
+	xinput set-prop $penID 'Coordinate Transformation Matrix' $inverted
+	xrandr --output $screenID --rotate inverted
+elif [[ $cpos == $inverted_float ]]; then
+	xinput set-prop $fingerID 'Coordinate Transformation Matrix' $left
+	xinput set-prop $penID 'Coordinate Transformation Matrix' $left
+	xrandr --output $screenID --rotate left
+else
+	xinput set-prop $fingerID 'Coordinate Transformation Matrix' $normal
+	xinput set-prop $penID 'Coordinate Transformation Matrix' $normal
+	xrandr --output $screenID --rotate normal
+fi
+
