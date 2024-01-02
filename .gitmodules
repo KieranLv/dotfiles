@@ -1,9 +1,9 @@
 [submodule "dmenu"]
-	path = dmenu
+	path = repos/dmenu
 	url = https://github.com/kieroid/dmenu
 [submodule "dwm"]
-	path = dwm
+	path = repos/dwm
 	url = https://github.com/kieroid/dwm
 [submodule "st"]
-	path = st
+	path = repos/st
 	url = https://github.com/kieroid/st
