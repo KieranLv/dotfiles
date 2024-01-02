@@ -5,6 +5,7 @@ i have a lot of things on here that go to my computers.<br/>
 
 "what are these files?"
 -----------------------
+* st (with patches)
 * dwm (with patches)
 * dmenu (with patches)
 * vim (vimrc with addons)
