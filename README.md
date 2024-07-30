@@ -1,3 +1,7 @@
+# this repository is archived. move to [here](https://github.com/kieroid/kieroid)
+
+
+
 kieran dotfiles
 ===============
 welcome to my dotfiles.<br/>
